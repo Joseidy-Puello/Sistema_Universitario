@@ -7,13 +7,14 @@ using Sistema_Universitario;
 
 namespace Sistema_Universitario
 {
-    public class Matricula : IEvaluable 
+    public class Matricula : IEvaluable
     {
         public string Estudiante { get; set; }
         public string Curso { get; set; }
         public DateTime FechaMatricula { get; set; }
 
         private List<decimal> Calificaciones = new List<decimal>();
+
 
         // Implementación de los métodos de la interfaz IPromediable
         public void AgregarCalificacion(decimal calificacion)
@@ -35,6 +36,20 @@ namespace Sistema_Universitario
         public bool HaAprobado()
         {
             return ObtenerPromedio() >= 70;
+        }
+
+        public string ObtenerEstado()
+        {
+            // Si no hay calificaciones, el curso está en progreso
+            if (Calificaciones.Count == 0)
+                return "En Curso";
+
+            // Si el promedio es 70 o más, está aprobado
+            if (ObtenerPromedio() >= 70)
+                return "Aprobado";
+
+            // Si hay calificaciones pero el promedio es menor a 70, está reprobado
+            return "Reprobado";
         }
     }
 
