@@ -18,7 +18,8 @@ namespace Sistema_Universitario
             Contratado
         }
 
-        [ValidacionRango(500,10000)]
+        [ValidacionRango(500, 10000)]
         public decimal SalarioBase { get; set; }
+        public string CodigoEmpleado { get; set; }
     }
 }
