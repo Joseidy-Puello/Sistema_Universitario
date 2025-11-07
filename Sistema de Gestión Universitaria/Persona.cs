@@ -1,8 +1,9 @@
 ﻿using System;
+using Sistema_Universitario;
 
 namespace Sistema_Universitario
 {
-    public abstract class Persona
+    public abstract class Persona : IIdentificable
     {
         public string Identificacion { get; set; }
         public string Nombre { get; set; }

@@ -9,8 +9,8 @@ namespace Sistema_Universitario
 {
     public class Matricula : IEvaluable
     {
-        public string Estudiante { get; set; }
-        public string Curso { get; set; }
+        public Estudiante Estudiante { get; set; }
+        public Curso Curso { get; set; }
         public DateTime FechaMatricula { get; set; }
 
         private List<decimal> Calificaciones = new List<decimal>();
