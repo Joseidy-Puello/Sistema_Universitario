@@ -28,6 +28,9 @@ namespace Sistema_Universitario
                 Console.WriteLine("6. Ver Reportes");
                 Console.WriteLine("7. Análisis con Reflection");
                 Console.WriteLine("8. Salir");
+                Console.WriteLine("9. Generar datos de prueba");
+                Console.WriteLine("10. Demostrar funcionalidades");
+
                 Console.Write("\nSeleccione una opción: ");
 
                 string entrada = Console.ReadLine();
@@ -60,6 +63,14 @@ namespace Sistema_Universitario
                             break;
                         case "8":
                             salir = true;
+                            break;
+                        case "9":
+                            GenerarDatosPrueba();
+                            break;
+                        case "10":
+                            DemostrarFuncionalidades();
+                            break;
+
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
                             Console.WriteLine("Gracias por usar el sistema. ¡Hasta pronto!");
                             Console.ResetColor();
