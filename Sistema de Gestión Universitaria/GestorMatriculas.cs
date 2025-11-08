@@ -213,6 +213,10 @@ namespace Sistema_Universitario
                 .ToList();
         }
 
+        public List<Matricula> ObtenerTodasMatriculas()
+        {
+            return _matriculas.ToList();
+        }
 
     }
 }

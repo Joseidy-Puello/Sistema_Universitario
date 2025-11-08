@@ -13,7 +13,7 @@ namespace Sistema_Universitario
         public Curso Curso { get; set; }
         public DateTime FechaMatricula { get; set; }
 
-        private List<decimal> Calificaciones = new List<decimal>();
+        public List<decimal> Calificaciones { get; private set; } = new List<decimal>();
 
 
         // Implementación de los métodos de la interfaz IPromediable
